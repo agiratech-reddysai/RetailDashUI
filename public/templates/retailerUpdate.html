@@ -1,0 +1,38 @@
+<div class="modal-header">
+<button type="button" class="close" ng-click="close()">&times;</button>
+<h3 class="modal-title">Update Retailer Details</h3>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"><span style="color:red">{{Response}}</span></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Retailer ID</div>
+    <div class="col-md-6"><input type="text" ng-model="retailer.id" readonly/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Spider ID</div>
+    <div class="col-md-6"><input type="text" ng-model="retailer.spiderId"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Name</div>
+    <div class="col-md-6"><input type="text" ng-model="retailer.name"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Base Url</div>
+    <div class="col-md-6"><input type="text" ng-model="retailer.baseUrl"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Currency</div>
+    <div class="col-md-6"><input type="text" ng-model="retailer.currency"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Currency Format</div>
+    <div class="col-md-6"><input type="text" ng-model="retailer.currencyFormat"/></div>
+  </div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-warning" type="button" ng-click="updateRetailer()">Update</button>
+</div>

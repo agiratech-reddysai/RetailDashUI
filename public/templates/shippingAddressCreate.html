@@ -1,0 +1,47 @@
+<div class="modal-header">
+<button type="button" class="close" ng-click="close()">&times;</button>
+<h3 class="modal-title">Enter Retailer Shipping Option Details</h3>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"><span style="color:red">{{Response}}</span></div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">RetailerName</div>
+      <div class="col-md-6">
+        <select ng-model="shippingAddress.retailerId" class="form-control">
+          <option ng-repeat="x in retailerList" value = "{{x.id}}" >{{x.name}}</option>
+        </select>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Address1<span class="required">*</span></div>
+    <div class="col-md-6"><input type="text" ng-model="shippingAddress.address1"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Address2<span class="required">*</span></div>
+    <div class="col-md-6"><input type="text" ng-model="shippingAddress.address2"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">City<span class="required">*</span></div>
+    <div class="col-md-6"><input type="text" ng-model="shippingAddress.city"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">State<span class="required">*</span></div>
+    <div class="col-md-6"><input type="text" ng-model="shippingAddress.state"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">Country<span class="required">*</span></div>
+    <div class="col-md-6"><input type="text" ng-model="shippingAddress.country"/></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">ZipCode<span class="required">*</span></div>
+    <div class="col-md-6"><input type="text" ng-model="shippingAddress.zipCode"/></div>
+  </div>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-warning" type="submit" ng-click="CreateShippingAddressValue()">Save</button>
+</div>
